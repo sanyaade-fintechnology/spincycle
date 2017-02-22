@@ -6,6 +6,7 @@ type Repo interface {
 	Add(*Chain) error
 	Remove(uint) error
 	Set(*Chain) error
+	Get(uint) (*Chain, error)
 }
 
 type FakeRepo struct{}
@@ -20,4 +21,10 @@ func (f *FakeRepo) Remove(id uint) error {
 
 func (f *FakeRepo) Set(chain *Chain) error {
 	return nil
+}
+
+func (f *FakeRepo) Get(id uint) (*Chain, error) {
+	c := &Chain{}
+
+	return c, nil
 }
