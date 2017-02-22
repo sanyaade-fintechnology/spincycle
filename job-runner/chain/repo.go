@@ -4,7 +4,7 @@ package chain
 
 type Repo interface {
 	Add(*Chain) error
-	Remove(int) error
+	Remove(uint) error
 	Set(*Chain) error
 }
 
@@ -14,7 +14,7 @@ func (f *FakeRepo) Add(chain *Chain) error {
 	return nil
 }
 
-func (f *FakeRepo) Remove(id int) error {
+func (f *FakeRepo) Remove(id uint) error {
 	return nil
 }
 
